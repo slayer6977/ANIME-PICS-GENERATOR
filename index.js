@@ -12,14 +12,14 @@ btnEl.addEventListener("click", async function () {
     const response = await fetch("https://api.catboys.com/img");
     const data = await response.json();
     btnEl.disabled = false;
-    btnEl.innerText = "Find Anime";
+    btnEl.innerText = "Find Anime Pics";
     animeContainerEl.style.display = "block";
     animeImgEl.src = data.url;
     amineNameEl.innerText = data.artist;
   } catch (error) {
     console.log(error);
     btnEl.disabled = false;
-    btnEl.innerText = "Find Anime";
+    btnEl.innerText = "Find Anime Pics";
     amineNameEl.innerText = "An error happened, please try again";
   }
 });
